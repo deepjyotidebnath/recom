@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Product Recommendations Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Sora:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top wrap">
+  <b class="logo">🎯 RecoKart</b>
+  <div class="ctl">
+    <label>Strategy
+      <select id="mode">
+        <option value="auto">Auto (A/B split)</option>
+        <option value="A">A: Best sellers</option>
+        <option value="B">B: AI co-purchase</option>
+      </select>
+    </label>
+    <span id="badge" class="badge"></span>
+    <button class="btn" id="cartBtn">Cart (<span id="cnt">0</span>)</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="intro">
+    <h1>Recommendations that raise your order value</h1>
+    <p>Open a few products to teach the engine your taste. Every suggestion on the page updates as you browse.</p>
+  </section>
+  <section id="forYou"></section>
+  <section><h2>All products</h2><div id="grid" class="grid"></div></section>
+  <section id="ab"></section>
+</main>
+
+<dialog id="dlg"></dialog>
+<dialog id="cartDlg"></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
